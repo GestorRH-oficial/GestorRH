@@ -1,0 +1,29 @@
+
+
+
+
+
+
+.img-container{
+display: flex;
+justify-content: center;
+}
+
+    .botao1{
+        display: flex;
+        justify-content: center;
+    }
+.botao2{
+        display: flex;
+        justify-content: center;
+    }
+.botao3{
+        display: flex;
+        justify-content: center;
+    }
+.botao4{
+        
+        display: flex;
+        justify-content: center;
+    }
+
