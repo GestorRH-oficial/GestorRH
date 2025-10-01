@@ -1,0 +1,67 @@
+
+
+
+ body { 
+            background-image: url(../style/tela\ de\ login.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(246, 249, 250);
+            margin: 40;
+            
+            
+        }
+
+        .tela-login {
+            background: rgba(253, 251, 251, 0);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        .tela-login img {
+            display: block;
+            margin: 0 auto 20px auto; /* Centraliza a imagem e adiciona espaço inferior */
+            max-width: 100px; /* Tamanho máximo da imagem */
+            height: auto;
+            border-radius: 8px; /* Opcional: arredonda cantos da imagem */
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #cccccc1e;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: dodgerblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+        }
+ footer{
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    text-align: right;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 90%  ;
+ }
+
+

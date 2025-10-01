@@ -1,0 +1,75 @@
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      
+      
+    }
+
+    .container {
+      margin: 20px auto 20px auto;
+      background: rgb(255, 255, 255);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #078640;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      color: rgb(248, 250, 249);
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+    .voltar{
+       position: fixed;     
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+    }
+    
+
+    button:hover {
+      background: #06410e;
+    }
+
+    .registro {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #444;
+      text-align: left;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
