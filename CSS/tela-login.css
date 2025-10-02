@@ -25,6 +25,13 @@
             width: 300px;
         }
 
+        
+        .color{
+            color: black;
+            text-decoration: none; /* Remove o sublinhado (opcional) */
+        }
+
+
         .tela-login img {
             display: block;
             margin: 0 auto 20px auto; /* Centraliza a imagem e adiciona espaço inferior */
@@ -63,5 +70,3 @@
     bottom: 0;
     width: 90%  ;
  }
-
-
