@@ -27,6 +27,7 @@
         .color{
             color: black;
             text-decoration: none; /* Remove o sublinhado */
+            hover: black;
         }
 
 
@@ -59,7 +60,8 @@
         button:hover {
             background-color: black;
         }
- footer{
+    
+        footer {
     background: rgba(0, 0, 0, 0);
     color: black;
     text-align: right;
@@ -67,4 +69,5 @@
     position: fixed;
     bottom: 0;
     width: 90%  ;
- }
+        }
+     
