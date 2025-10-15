@@ -26,17 +26,17 @@
         
         .color{
             color: black;
-            text-decoration: none; /* Remove o sublinhado */
+            text-decoration: none; 
             hover: black;
         }
 
 
         .tela-login img {
             display: block;
-            margin: 0 auto 20px auto; /* Centraliza a imagem e adiciona espaço inferior */
-            max-width: 100px; /* Tamanho máximo da imagem */
+            margin: 0 auto 20px auto; 
+            max-width: 100px; 
             height: auto;
-            border-radius: 8px; /* Opcional: arredonda cantos da imagem */
+            border-radius: 8px;
         }
 
         input {
@@ -71,3 +71,191 @@
     width: 90%  ;
         }
      
+        :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --success:#10b981;
+      --danger:#ef4444;
+      --radius:12px;
+      --shadow: 0 8px 24px rgba(20,20,40,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .container{
+      width:100%;
+      max-width:980px;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    header h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:-0.2px;
+    }
+    header p{margin:0;color:var(--muted);font-size:13px}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+      background-color: rgba(255, 255, 255, 0.466);
+    }
+
+    form{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:18px;
+      align-items:start;
+    }
+
+    .left, .right{display:flex;flex-direction:column;gap:14px}
+
+    label{
+      font-size:13px;
+      margin-bottom:6px;
+      display:block;
+      color:#0b1220;
+      font-weight:600;
+    }
+
+    .field{
+      background:#fbfdff;
+      border:1px solid #e6eefb;
+      padding:12px 40px;
+      border-radius:10px;
+    }
+
+    select.field, input.field, textarea.field{
+      width:100%;
+      border:0;
+      font-size:14px;
+      background:transparent;
+      outline:none;
+    }
+
+    .row{
+      display:flex;
+      gap: 35px;
+    }
+
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    
+    .type-options{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .type-options input[type="radio"]{display:none}
+    .type-label{
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #e6eefb;
+      cursor:pointer;
+      user-select:none;
+      font-weight:600;
+      background:transparent;
+      transition:all 0.18s;
+    }
+    input[type="radio"]:checked + .type-label{
+      background:linear-gradient(180deg, rgba(37,99,235,0.08), rgba(37,99,235,0.04));
+      border-color:var(--accent);
+      color:var(--accent);
+      box-shadow:0 6px 18px rgba(37,99,235,0.06);
+    }
+
+    .partial-block, .sell-block{
+      display:none;
+      margin-top:4px;
+      gap:8px;
+      flex-direction:column;
+    }
+
+   
+    .partial-block{ display:flex; }
+
+   
+     .sell-block{ display:flex; }
+
+    .hint{ font-size:13px;color:var(--muted) }
+
+    .right .summary{
+      background: linear-gradient(180deg,#fbfdff,#f8fbff);
+      border:1px solid #eaf2ff;
+      padding:14px;
+      border-radius:10px;
+    }
+    .summary h3{margin:0 0 8px 0;font-size:15px}
+    .summary p{margin:0;color:var(--muted);font-size:14px}
+
+    .btns{
+      display:flex;
+      gap:10px;
+      margin-top:8px;
+    }
+    .btn{
+      padding:10px 12px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:white;
+      box-shadow:0 8px 24px rgba(37, 100, 235, 0.151);
+    }
+    .btn.ghost{
+      background:transparent;
+      border:1px solid #e6eefb;
+      color:#0b1220;
+    }
+
+    footer.small{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+  
+    @media (max-width:880px){
+      form{grid-template-columns:1fr; padding-bottom:6px}
+    }
+
+   
+    .muted{ color:var(--muted); font-size:13px }
+    .inline-note{ font-size:13px; color:var(--muted) }
+
+  
+    input[type="number"]{
+      width:120px;
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6eefb;
+      background:transparent;
+      font-weight:600;
+    }
+
+   
+    input[type="date"]{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6eefb;
+      background:transparent;
+    }
+    .incio{
+        text-decoration: black;
+        text-decoration-color: black;
+    }
