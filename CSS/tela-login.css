@@ -27,7 +27,7 @@
         .color{
             color: black;
             text-decoration: none; 
-            hover: black;
+            cursor: pointer
         }
 
 
@@ -48,6 +48,10 @@
             border-radius: 5px;
         }
 
+        section a {
+            color: #555;
+                  }
+
         button {
             padding: 10px 20px;
             border: none;
@@ -62,14 +66,14 @@
         }
     
         footer {
-    background: rgba(0, 0, 0, 0);
-    color: black;
-    text-align: right;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 90%  ;
-        }
+        background: rgba(0, 0, 0, 0);
+        color: black;
+        text-align: right;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 90%  ;
+            }
      
         :root{
       --bg:#f5f7fb;
@@ -95,12 +99,18 @@
       gap:16px;
       margin-bottom:18px;
     }
+
     header h1{
       margin:0;
       font-size:20px;
       letter-spacing:-0.2px;
     }
-    header p{margin:0;color:var(--muted);font-size:13px}
+    
+    header p {
+      margin:0;
+      color:var(--muted);
+      font-size:13px
+    }
 
     .card{
       background:var(--card);
@@ -117,9 +127,13 @@
       align-items:start;
     }
 
-    .left, .right{display:flex;flex-direction:column;gap:14px}
+    .left, .right {
+      display:flex;
+      flex-direction:column;
+      gap:14px
+      }
 
-    label{
+    label {
       font-size:13px;
       margin-bottom:6px;
       display:block;
@@ -158,8 +172,11 @@
       gap:12px;
       align-items:center;
     }
-    .type-options input[type="radio"]{display:none}
-    .type-label{
+    .type-options input[type="radio"] {
+      display:none
+    }
+
+    .type-label {
       padding:10px 12px;
       border-radius:10px;
       border:1px solid #e6eefb;
@@ -169,14 +186,15 @@
       background:transparent;
       transition:all 0.18s;
     }
-    input[type="radio"]:checked + .type-label{
+
+    input[type="radio"]:checked + .type-label {
       background:linear-gradient(180deg, rgba(37,99,235,0.08), rgba(37,99,235,0.04));
       border-color:var(--accent);
       color:var(--accent);
       box-shadow:0 6px 18px rgba(37,99,235,0.06);
     }
 
-    .partial-block, .sell-block{
+    .partial-block, .sell-block {
       display:none;
       margin-top:4px;
       gap:8px;
@@ -184,62 +202,87 @@
     }
 
    
-    .partial-block{ display:flex; }
+    .partial-block { 
+      display:flex; 
+    }
 
-   
-     .sell-block{ display:flex; }
+     .sell-block { 
+      display:flex; 
+    }
 
-    .hint{ font-size:13px;color:var(--muted) }
+    .hint { 
+      font-size:13px;
+      color:var(--muted)
+     }
 
-    .right .summary{
+    .right .summary {
       background: linear-gradient(180deg,#fbfdff,#f8fbff);
       border:1px solid #eaf2ff;
       padding:14px;
       border-radius:10px;
     }
-    .summary h3{margin:0 0 8px 0;font-size:15px}
-    .summary p{margin:0;color:var(--muted);font-size:14px}
 
-    .btns{
+    .summary h3{
+      margin:0 0 8px 0;
+      font-size:15px
+    }
+    .summary p {
+      margin:0;
+      color:var(--muted);
+      font-size:14px
+    }
+
+    .btns {
       display:flex;
       gap:10px;
       margin-top:8px;
     }
-    .btn{
+
+    .btn {
       padding:10px 12px;
       border-radius:10px;
       border:0;
       cursor:pointer;
       font-weight:700;
     }
-    .btn.primary{
+
+    .btn.primary {
       background:var(--accent);
       color:white;
       box-shadow:0 8px 24px rgba(37, 100, 235, 0.151);
     }
-    .btn.ghost{
+
+    .btn.ghost {
       background:transparent;
       border:1px solid #e6eefb;
       color:#0b1220;
     }
 
-    footer.small{
+    footer.small {
       margin-top:12px;
       color:var(--muted);
       font-size:13px;
     }
 
   
-    @media (max-width:880px){
-      form{grid-template-columns:1fr; padding-bottom:6px}
+    @media (max-width:880px) {
+      form { grid-template-columns:1fr;
+             padding-bottom:6px }
     }
 
-   
-    .muted{ color:var(--muted); font-size:13px }
-    .inline-note{ font-size:13px; color:var(--muted) }
 
-  
-    input[type="number"]{
+    .muted { 
+      color:var(--muted); 
+      font-size:13px 
+           }
+
+    .inline-note {
+       font-size:13px; 
+       color:var(--muted) 
+         }
+
+    input[type="number"]
+    {
       width:120px;
       padding:8px 10px;
       border-radius:8px;
@@ -255,7 +298,8 @@
       border:1px solid #e6eefb;
       background:transparent;
     }
-    .incio{
-        text-decoration: black;
-        text-decoration-color: black;
-    }
+
+    .incio {
+        text-decoration: none;
+        color: black;
+}
