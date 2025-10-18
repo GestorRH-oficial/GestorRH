@@ -2,13 +2,12 @@
         margin: 0;
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        background-color: #f4f7f9;
-        color: #333;
+        background-color: white
     }
 
 
     header {
-        background: dodgerblue;
+        background: rgb(0, 95, 150);
         color: white;
         padding: 20px;
         text-align: center;
@@ -21,8 +20,8 @@
     }
 
     header p {
-        margin: 5px 0 0;
-        font-size: 1.2em;
+        margin: 5px;
+        font-size: 1em;
         color: black;
     }
 
@@ -49,7 +48,7 @@
         padding: 12px 25px;
         border-radius: 5px;
         font-weight: bold;
-        background: dodgerblue;
+        background: rgb(0, 95, 150);
         color: white;
         transition: 0.3s ease;
     }
@@ -59,8 +58,8 @@
     }
 
     footer {
-        background: dodgerblue;
-        color: #ccc;
+        background: rgb(0, 95, 150);
+        color: black;
         padding: 15px;
         text-align: center;
         margin-top: 40px;

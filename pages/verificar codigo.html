@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação Codigo</title>
+    <link rel="stylesheet" href="../css/verificar codigo.css">
+</head>
+<body>
+
+  <main class="card" role="main" aria-labelledby="title">
+    <h1 id="title">Insira o código enviado por email</h1>
+    <p class="lead">Digite o código de 6 dígitos que enviamos para o seu <strong>Email</strong>. Ele expira em alguns minutos.</p>
+
+    <form id="codeForm" autocomplete="one-time-code" novalidate>
+      <div class="code-inputs" role="group" aria-label="Código de verificação">
+        <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 1" ></label>
+        <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 2" ></label>
+        <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 3" ></label>
+        <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 4" ></label>
+        <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 5" ></label>
+        <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 6" ></label>
+      </div>
+
+      <div class="actions">
+        <div class="muted small" id="timer">Reenviar em <span id="count">00:30</span></div>
+        <button type="button" class="resend" id="resendBtn" disabled>Reenviar código</button>
+        <button type="submit" class="primary" id="submitBtn" disabled>Verificar</button>
+      </div>
+
+      <div class="small">Não recebeu? Verifique a pasta de spam ou tente reenviar.</div>
+      <div class="error" id="error" role="alert" aria-live="polite" style="display:none"></div>
+    </form>
+  </main>
+
+</body>
+</html>
