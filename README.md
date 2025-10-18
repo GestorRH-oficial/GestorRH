@@ -40,7 +40,7 @@ O **Gestor RH** foi desenvolvido para centralizar e facilitar a administração 
 
 ## 🛠️ Tecnologias (Sugestão)  
 - **Backend:** Node.js, Python ou Java  
-- **Frontend:** React, Angular ou Vue  
+- **Frontend:** React, Angular ou JavaScript
 - **Banco de Dados:** PostgreSQL ou MySQL  
 - **Autenticação:** JWT / OAuth2  
 

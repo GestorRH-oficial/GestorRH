@@ -1,0 +1,146 @@
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background-image: url(../style/tela\ de\ login.png);
+      padding:24px;
+      color: black;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 6px 30px rgba(15,23,42,0.08);
+      padding:28px;
+      background-color: transparent;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:20px;
+      letter-spacing:-0.2px;
+    }
+
+    p.lead{
+      margin:0 0 20px;
+      color: black;
+      font-size:14px;
+    }
+
+    .code-inputs{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      margin:18px 0 10px;
+    }
+
+    .code-box{
+      width:52px;
+      height:64px;
+      border-radius:10px;
+      border:1px solid black;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: white;
+      font-size:28px;
+      font-weight:600;
+      color: black;
+      transition:all .12s ease;
+    }
+
+    .code-box:focus-within{
+      border-color:var(--accent);
+      box-shadow:0 6px 18px black;
+      transform:translateY(-2px);
+    }
+
+    .code-box input{
+      width:100%;
+      height:100%;
+      border:0;
+      background:transparent;
+      outline:none;
+      text-align:center;
+      font-size:28px;
+      font-weight:600;
+      caret-color:var(--accent);
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:14px;
+    }
+
+    button.primary{
+      background: rgb(0, 95, 150);
+      color: black;
+      border: 0;
+      padding:10px 18px;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:rgb(0, 95, 150);
+    }
+    button.primary {
+      opacity:.55;
+      cursor:not-allowed;
+      box-shadow:none;
+    }
+
+    button.resend {
+      background: rgb(0, 95, 150);
+      color: black;
+      border: 0;
+      padding:10px 18px;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:rgb(0, 95, 150);
+    }
+
+    .button.resend :hover { 
+        background: black;
+    }
+
+     .button.primary :hover { 
+        background: black;
+    }
+
+    .muted{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .resend{
+      background:transparent;
+      border:0;
+      color:var(--accent);
+      cursor:pointer;
+      font-weight:600;
+      font-size:13px;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+
+    .small{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:12px;
+      text-align:center;
+    }
+
+    .error{
+      color:var(--danger);
+      font-size:13px;
+      margin-top:10px;
+      text-align:center;
+    }
