@@ -1,0 +1,191 @@
+:root {
+  --accent: #3b82f6;
+  --accent-2: #9333ea;
+  --success: #10b981;
+  --danger: #ef4444;
+  font-family: Inter, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-image: url(../style/tela\ de\ login.png);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+    margin: 40;
+    
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 { font-size: 24px; margin-bottom: 6px; }
+header p { color: #232425; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+form .row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color:#232425;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+}
+
+.btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+th {
+  color: #232425;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.tag.ok {
+  background: rgba(16,185,129,0.15);
+  color: var(--success);
+}
+
+.tag.abs {
+  background: rgba(239,68,68,0.1);
+  color: var(--danger);
+}
+.tag.h{
+  background-color: #cee40c46;
+  color: var(rgba(0,0,0,0.4));
+}
+
+.muted {
+  color: #232425;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+footer {
+  margin-top: 24px;
+  position: relative;
+  color: black;
+  font-size: 13px;
+  width: 90%;
+}
+
+
+
+
+body.light {
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+  color: #1f2937;
+}
+
+body.light .card {
+  background: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+body.light header p,
+body.light .muted { color: #6b7280; }
+
+body.light input,
+body.light select,
+body.light textarea {
+  background: #f9fafb;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+body.light th {
+  color: #0556f7;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.light td {
+  border-bottom: 1px dashed #e5e7eb;
+  color: #111827;
+}
+
+body.light .btn.secondary {
+  border: 1px solid #d1d5db;
+  color: #455774;
+}
+
+body.light footer {
+  color: #637291;
+}
+
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
