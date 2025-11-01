@@ -1,0 +1,93 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+    
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35%;
+    background-color: dodgerblue;
+    color: white;
+    padding: 20px;
+}
+
+header .logo {
+    height: auto;
+    max-height: 100px;
+}
+
+.controle-escalas {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.controle-escalas form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.controle-escalas form input, 
+.controle-escalas form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.controle-escalas form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controle-escalas form button:hover {
+    background-color: dodgerblue;
+}
+
+.controle-escalas table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.controle-escalas table, 
+.controle-escalas th, 
+.controle-escalas td {
+    border: 1px solid #ccc;
+}
+
+.controle-escalas th, 
+.controle-escalas td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.controle-escalas h2, .controle-escalas h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 1000px ;
+    text-align: center;
+    padding: 30px;
+    background-color: dodgerblue;
+}
