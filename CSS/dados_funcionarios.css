@@ -1,3 +1,5 @@
+/* inicio do css da tela de dados do funcionario */
+
 * {
   margin: 0;
   padding: 0;
@@ -116,3 +118,5 @@ footer {
   color: #666;
   margin: 20px 0;
 }
+
+/* fim do css da tela de dados do funcionario */

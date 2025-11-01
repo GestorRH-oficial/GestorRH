@@ -1,6 +1,6 @@
 # 📊 Gestor RH  
 
-Sistema de **Gestão de Recursos Humanos** voltado para pequenas empresas, com foco em **simplicidade**, **organização** e **leitura massiva de dados**.  
+Sistema de **Gestão de Recursos Humanos** voltado para pequenas empresas, com foco em **simplicidade** e **organização**
 
 ---
 
@@ -40,8 +40,8 @@ O **Gestor RH** foi desenvolvido para centralizar e facilitar a administração 
 
 ## 🛠️ Tecnologias (Sugestão)  
 - **Backend:** Node.js, Python ou Java  
-- **Frontend:** React, Angular ou JavaScript
-- **Banco de Dados:** PostgreSQL ou MySQL  
+- **Frontend:** Html, Css, React, Angular ou JavaScript
+- **Banco de Dados:** MySQL  
 - **Autenticação:** JWT / OAuth2  
 
 ---

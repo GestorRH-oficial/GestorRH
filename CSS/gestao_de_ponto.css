@@ -1,13 +1,4 @@
-:root {
-  --accent: #3b82f6;
-  --accent-2: #9333ea;
-  --success: #10b981;
-  --danger: #ef4444;
-  font-family: Inter, Arial, sans-serif;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
+/* inicio do css da tela de gestao de pontos */
 body {
     background-image: url(../style/tela\ de\ login.png);
     background-size: cover;
@@ -20,7 +11,6 @@ body {
     margin: 40;
     
 }
-
 
 .container {
   max-width: 1100px;
@@ -91,6 +81,16 @@ input, select, textarea {
   border: 1px solid rgba(255,255,255,0.2);
 }
 
+
+.btn:hover {
+            background-color: rgb(50, 130, 210);
+        }
+
+        
+.btn.secondary:hover {
+            background-color: rgb(50, 130, 210);
+        }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -142,9 +142,6 @@ footer {
   width: 90%;
 }
 
-
-
-
 body.light {
   background: linear-gradient(180deg, #f9fafb, #ffffff);
   color: #1f2937;
@@ -189,3 +186,5 @@ body.light footer {
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
 }
+
+/* fim do css da tela de gestao do ponto */
