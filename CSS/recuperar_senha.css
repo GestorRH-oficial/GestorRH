@@ -28,6 +28,10 @@ h2 {
     color: #333;
 }
 
+a {
+    color: black;
+}
+
 .message {
     margin-bottom: 1rem;
     color: #555;
@@ -63,7 +67,7 @@ button {
 }
 
 button:hover {
-    background-color: black;
+    background-color: rgb(50, 130, 210);
 }
 
 .message {
@@ -72,3 +76,5 @@ button:hover {
     font-size: 0.9rem;
     color: black;
 }
+/* fim do css da tela de recuperar senha */
+     

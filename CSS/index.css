@@ -1,39 +1,29 @@
 body {
     background-image: url(../style/tela\ de\ login.png);
     background-size: cover;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: right;
     align-items: center;
     height: 100vh;
     background-color: transparent;
-    margin: 40;
+    display: flex;
 }
 
 .tela-login {
-    background: rgba(253, 251, 251, 0);
-    padding: 30px;
+    margin-top: 80px;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
     text-align: center;
     width: 300px;
 }
 
-   .color {
-     color: black;
-     text-decoration: none; 
-     cursor: pointer
-        }
-
 .tela-login img {
     display: block;
     margin: 0 auto 20px auto;
-    /* Centraliza a imagem e adiciona espaço inferior */
     max-width: 100px;
-    /* Tamanho máximo da imagem */
     height: auto;
-    border-radius: 8px;
-    /* Opcional: arredonda cantos da imagem */
+    border-radius: 2px;
 }
 
 input {
@@ -41,17 +31,9 @@ input {
     margin: 10px auto;
     padding: 10px;
     width: 90%;
-    border: 1px solid #cccccc1e;
+    border: 1px solid black;
     border-radius: 5px;
 }
-
-tela-login img {
-            display: block;
-            margin: 0 auto 20px auto; 
-            max-width: 100px; 
-            height: auto;
-            border-radius: 8px;
-        }
 
 button {
     padding: 10px 20px;
@@ -60,53 +42,38 @@ button {
     margin-top: 10px;
     background-color: dodgerblue;
     color: white;
-    cursor: pointer;
+    cursor: pointer ;
 }
- section a {
-            color: #555;
+
+button:hover {
+            background-color: rgb(50, 130, 210);
+        }
+
+section a {
+            top: 20px;
+            height: 40px;
+            position: relative;
+            color: black;
             }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: dodgerblue;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: black;
-        }
-    
-        footer {
+footer {
         background: rgba(0, 0, 0, 0);
         color: black;
         text-align: right;
-        padding: 10px;
         position: fixed;
         bottom: 0;
-        width: 90%  ;
+        width: 90%;
             }
-     
-        :root{
-      --bg:#f5f7fb;
-      --card:#ffffff;
-      --accent:#2563eb;
-      --muted:#6b7280;
-      --success:#10b981;
-      --danger:#ef4444;
-      --radius:12px;
-      --shadow: 0 8px 24px rgba(20,20,40,0.06);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
+/* fim do css da tela de login */
 
-    .container{
+/* inicio do css da tela cadastro de funcionarios */
+     
+.container {
       width:100%;
       max-width:980px;
     }
 
-    header{
+header {
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -114,19 +81,18 @@ button {
       margin-bottom:18px;
     }
 
-    header h1{
+header h1 {
       margin:0;
       font-size:20px;
-      letter-spacing:-0.2px;
     }
     
-    header p {
+header p {
       margin:0;
       color:var(--muted);
       font-size:13px
     }
 
-    .card{
+.card{
       background:var(--card);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
@@ -134,20 +100,20 @@ button {
       background-color: rgba(255, 255, 255, 0.466);
     }
 
-    form{
+form{
       display:grid;
       grid-template-columns: 1fr 320px;
       gap:18px;
       align-items:start;
     }
 
-    .left, .right {
+.left, .right {
       display:flex;
       flex-direction:column;
       gap:14px
       }
 
-    label {
+label {
       font-size:13px;
       margin-bottom:6px;
       display:block;
@@ -155,14 +121,14 @@ button {
       font-weight:600;
     }
 
-    .field{
+.field{
       background:#fbfdff;
       border:1px solid #e6eefb;
       padding:12px 40px;
       border-radius:10px;
     }
 
-    select.field, input.field, textarea.field{
+select.field, input.field, textarea.field{
       width:100%;
       border:0;
       font-size:14px;
@@ -170,27 +136,27 @@ button {
       outline:none;
     }
 
-    .row{
+.row{
       display:flex;
       gap: 35px;
     }
 
-    .small{
+.small{
       font-size:13px;
       color:var(--muted);
     }
 
     
-    .type-options{
+.type-options{
       display:flex;
       gap:12px;
       align-items:center;
     }
-    .type-options input[type="radio"] {
+.type-options input[type="radio"] {
       display:none
     }
 
-    .type-label {
+.type-label {
       padding:10px 12px;
       border-radius:10px;
       border:1px solid #e6eefb;
@@ -201,14 +167,7 @@ button {
       transition:all 0.18s;
     }
 
-    input[type="radio"]:checked + .type-label {
-      background:linear-gradient(180deg, rgba(37,99,235,0.08), rgba(37,99,235,0.04));
-      border-color:var(--accent);
-      color:var(--accent);
-      box-shadow:0 6px 18px rgba(37,99,235,0.06);
-    }
-
-    .partial-block, .sell-block {
+.partial-block, .sell-block {
       display:none;
       margin-top:4px;
       gap:8px;
@@ -216,86 +175,76 @@ button {
     }
 
    
-    .partial-block { 
+.partial-block { 
       display:flex; 
     }
 
-     .sell-block { 
+.sell-block { 
       display:flex; 
     }
 
-    .hint { 
+.hint { 
       font-size:13px;
       color:var(--muted)
      }
 
-    .right .summary {
-      background: linear-gradient(180deg,#fbfdff,#f8fbff);
-      border:1px solid #eaf2ff;
-      padding:14px;
-      border-radius:10px;
-    }
-
-    .summary h3{
+.summary h3{
       margin:0 0 8px 0;
       font-size:15px
     }
-    .summary p {
+.summary p {
       margin:0;
       color:var(--muted);
       font-size:14px
     }
 
-    .btns {
+.btns {
       display:flex;
       gap:10px;
       margin-top:8px;
     }
 
-    .btn {
+.btn {
       padding:10px 12px;
       border-radius:10px;
       border:0;
       cursor:pointer;
       font-weight:700;
     }
+    
+.btn-secondary {
+      border-radius:10px;
+}
 
-    .btn.primary {
+.btn.primary {
       background:var(--accent);
       color:white;
       box-shadow:0 8px 24px rgba(37, 100, 235, 0.151);
     }
 
-    .btn.ghost {
+.btn.ghost {
       background:transparent;
       border:1px solid #e6eefb;
       color:#0b1220;
     }
 
-    footer.small {
+footer.small {
       margin-top:12px;
       color:var(--muted);
       font-size:13px;
     }
 
-  
-    @media (max-width:880px) {
-      form { grid-template-columns:1fr;
-             padding-bottom:6px }
-    }
-
-
-    .muted { 
+.muted { 
       color:var(--muted); 
       font-size:13px 
            }
 
-    .inline-note {
+.inline-note {
        font-size:13px; 
        color:var(--muted) 
          }
 
-    input[type="number"]
+input[type="number"]
     {
       width:120px;
       padding:8px 10px;
@@ -306,20 +255,20 @@ button {
     }
 
    
-    input[type="date"]{
+input[type="date"]{
       padding:8px 10px;
       border-radius:8px;
       border:1px solid #e6eefb;
       background:transparent;
     }
 
-    .incio {
+.incio {
         text-decoration: none;
         color: black;
 }
-=======
+
 button:hover {
-    background-color: black;
+    background-color: rgb(50, 130, 210);
 }
 
 footer {
@@ -331,3 +280,4 @@ footer {
     bottom: 0;
     width: 90%;
 }
+/* fim do css da tela de cadastro de funcionarios */
