@@ -1,3 +1,5 @@
+/* inicio do css da tela de login*/
+
 body {
     background-image: url(../style/tela\ de\ login.png);
     background-size: cover;
@@ -5,8 +7,6 @@ body {
     justify-content: right;
     align-items: center;
     height: 100vh;
-    background-color: transparent;
-    display: flex;
 }
 
 .tela-login {
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-            background-color: rgb(50, 130, 210);
+            background-color: rgb(50, 110, 210);
         }
 
 section a {
@@ -117,7 +117,7 @@ label {
       font-size:13px;
       margin-bottom:6px;
       display:block;
-      color:#0b1220;
+      color: black;
       font-weight:600;
     }
 
@@ -228,6 +228,14 @@ select.field, input.field, textarea.field{
       color:#0b1220;
     }
 
+.btn:hover {
+    background-color: rgb(50, 110, 210);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(50, 110, 210);
+}
+
 footer.small {
       margin-top:12px;
       color:var(--muted);
@@ -267,9 +275,6 @@ input[type="date"]{
         color: black;
 }
 
-button:hover {
-    background-color: rgb(50, 130, 210);
-}
 
 footer {
     background: rgba(0, 0, 0, 0);

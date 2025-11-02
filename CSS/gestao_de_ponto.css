@@ -1,15 +1,15 @@
 /* inicio do css da tela de gestao de pontos */
+
 body {
     background-image: url(../style/tela\ de\ login.png);
     background-size: cover;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: right;
     align-items: center;
     height: 100vh;
-    background-color: transparent;
     margin: 40;
-    
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-top: 20px;
 }
 
 header h1 { font-size: 24px; margin-bottom: 6px; }
@@ -81,14 +81,12 @@ input, select, textarea {
   border: 1px solid rgba(255,255,255,0.2);
 }
 
-
 .btn:hover {
             background-color: rgb(50, 130, 210);
         }
 
-        
 .btn.secondary:hover {
-            background-color: rgb(50, 130, 210);
+            background-color: rgb(50, 110, 210);
         }
 
 table {
@@ -178,13 +176,14 @@ body.light .btn.secondary {
   color: #455774;
 }
 
-body.light footer {
-  color: #637291;
-}
-
-
-@media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
-}
+footer {
+        background: rgba(0, 0, 0, 0);
+        color: black;
+        text-align: center;
+        bottom: 0;
+        width: 90%;
+        margin-bottom: 10px;
+        top: 150px;
+            }
 
 /* fim do css da tela de gestao do ponto */
