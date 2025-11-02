@@ -1,3 +1,4 @@
+/* inicio do css da tela de verificar codigo */
 
     body{
       margin:0;
@@ -108,11 +109,11 @@
     }
 
     .button.resend :hover { 
-        background: black;
+        background: rgb(50, 110, 210);
     }
 
      .button.primary :hover { 
-        background: black;
+        background: rgb(50, 110, 210);
     }
 
     .muted{
@@ -144,3 +145,4 @@
       margin-top:10px;
       text-align:center;
     }
+/* fim do css da tela de verificar codigo */

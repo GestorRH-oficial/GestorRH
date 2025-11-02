@@ -1,4 +1,6 @@
-    body {
+/* inicio do css da tela de quem somos */
+
+ body {
         margin: 0;
         font-family: Arial, sans-serif;
         line-height: 1.6;
@@ -64,3 +66,5 @@
         text-align: center;
         margin-top: 40px;
     }
+    
+/* fim do css da tela de quem somos*/
