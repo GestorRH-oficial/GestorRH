@@ -1,6 +1,4 @@
 
-
-
  body { 
             background-image: url(../style/tela\ de\ login.png);
             background-size: cover;
@@ -70,3 +68,224 @@
     bottom: 0;
     width: 90%  ;
  }
+
+ /* inicio do css da tela cadastro de funcionarios */
+     
+.container {
+      width:100%;
+      max-width:980px;
+    }
+
+header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+
+header h1 {
+      margin:0;
+      font-size:20px;
+    }
+    
+header p {
+      margin:0;
+      color:var(--muted);
+      font-size:13px
+    }
+
+.card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+      background-color: rgba(255, 255, 255, 0.466);
+    }
+
+form{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:18px;
+      align-items:start;
+    }
+
+.left, .right {
+      display:flex;
+      flex-direction:column;
+      gap:14px
+      }
+
+label {
+      font-size:13px;
+      margin-bottom:6px;
+      display:block;
+      color: black;
+      font-weight:600;
+    }
+
+.field{
+      background:#fbfdff;
+      border:1px solid #e6eefb;
+      padding:12px 40px;
+      border-radius:10px;
+    }
+
+select.field, input.field, textarea.field{
+      width:100%;
+      border:0;
+      font-size:14px;
+      background:transparent;
+      outline:none;
+    }
+
+.row{
+      display:flex;
+      gap: 35px;
+    }
+
+.small{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    
+.type-options{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+.type-options input[type="radio"] {
+      display:none
+    }
+
+.type-label {
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #e6eefb;
+      cursor:pointer;
+      user-select:none;
+      font-weight:600;
+      background:transparent;
+      transition:all 0.18s;
+    }
+
+.partial-block, .sell-block {
+      display:none;
+      margin-top:4px;
+      gap:8px;
+      flex-direction:column;
+    }
+
+   
+.partial-block { 
+      display:flex; 
+    }
+
+.sell-block { 
+      display:flex; 
+    }
+
+.hint { 
+      font-size:13px;
+      color:var(--muted)
+     }
+
+.summary h3{
+      margin:0 0 8px 0;
+      font-size:15px
+    }
+.summary p {
+      margin:0;
+      color:var(--muted);
+      font-size:14px
+    }
+
+.btns {
+      display:flex;
+      gap:10px;
+      margin-top:8px;
+    }
+
+.btn {
+      padding:10px 12px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:700;
+    }
+    
+.btn-secondary {
+      border-radius:10px;
+}
+
+.btn.primary {
+      background:var(--accent);
+      color:white;
+      box-shadow:0 8px 24px rgba(37, 100, 235, 0.151);
+    }
+
+.btn.ghost {
+      background:transparent;
+      border:1px solid #e6eefb;
+      color:#0b1220;
+    }
+
+.btn:hover {
+    background-color: rgb(50, 110, 210);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(50, 110, 210);
+}
+
+footer.small {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+.muted { 
+      color:var(--muted); 
+      font-size:13px 
+           }
+
+.inline-note {
+       font-size:13px; 
+       color:var(--muted) 
+         }
+
+input[type="number"]
+    {
+      width:120px;
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6eefb;
+      background:transparent;
+      font-weight:600;
+    }
+
+   
+input[type="date"]{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e6eefb;
+      background:transparent;
+    }
+
+.incio {
+        text-decoration: none;
+        color: black;
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    text-align: right;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+}
+/* fim do css da tela de cadastro de funcionarios */
