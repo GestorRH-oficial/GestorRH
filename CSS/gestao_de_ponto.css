@@ -1,7 +1,7 @@
 /* inicio do css da tela de gestao de pontos */
 
 body {
-    background-image: url(../style/tela\ de\ login.png);
+    background-image: url(../style/fundo\ cinza.png);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
@@ -33,7 +33,7 @@ header p { color: #232425; }
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.774);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
