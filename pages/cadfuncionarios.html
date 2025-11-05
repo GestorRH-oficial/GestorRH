@@ -1,70 +1,487 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro De Funcionarios</title>
-    <link rel="stylesheet" href="../css/tela-login.css">
-    <script src="../script/cad_funcionario.js"></script>
-
+    <title>Gestor RH - Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: rgb(53, 121, 189);
+            --secondary: #3498db;
+            --accent: #2980b9;
+            --light: #ecf0f1;
+            --dark: #156abf;
+            --success: #27ae60;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .cfuncionarios {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .form-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--success), var(--secondary));
+        }
+        
+        .form-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .form-header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .form-cadastro {
+            padding: 30px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+        
+        .form-group {
+            flex: 1 0 300px;
+            margin: 0 10px 20px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .form-group label i {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 2px rgba(46, 152, 222, 0.2);
+        }
+        
+        .form-group .error {
+            color: var(--danger);
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group.error input,
+        .form-group.error select {
+            border-color: var(--danger);
+        }
+        
+        .form-group.error .error {
+            display: block;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-secondary {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #dde4e6;
+        }
+        
+        .required::after {
+            content: " *";
+            color: var(--danger);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+        
+        .success-page {
+            display: none;
+            text-align: center;
+            padding: 50px 30px;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: var(--success);
+            margin-bottom: 20px;
+        }
+        
+        .success-page h2 {
+            color: var(--success);
+            margin-bottom: 15px;
+        }
+        
+        .success-page p {
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+        
+        @media (max-width: 768px) {
+            .form-group {
+                flex: 1 0 100%;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
- <Section class="cfuncionarios">
-  <div class="container">
-    <form class="form-cadastro">
-      <h2>Cadastro de Funcionario</h2>
+    <header>
+        <div class="logo">
+            <i class="fas fa-users"></i>
+            <h1>Gestor RH</h1>
+        </div>
+    </header>
+    
+    <Section class="cfuncionarios">
+        <div class="container">
+            <div class="form-header">
+                <h2>Cadastro de Funcionário</h2>
+                <p>Preencha os dados abaixo para cadastrar um novo funcionário</p>
+            </div>
+            
+            <form class="form-cadastro" id="cadastroForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome" class="required">
+                            <i class="fas fa-user"></i>Nome Completo
+                        </label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
+                        <div class="error">Por favor, informe o nome completo</div>
+                    </div>
 
-      <div class="form-group">
-        <label for="nome">Nome Completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
-      </div>
+                    <div class="form-group">
+                        <label for="email" class="required">
+                            <i class="fas fa-envelope"></i>E-mail
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                        <div class="error">Por favor, informe um e-mail válido</div>
+                    </div>
+                </div>
 
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
-      </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">
+                            <i class="fas fa-phone"></i>Telefone
+                        </label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                        <div class="error">Por favor, informe um telefone válido</div>
+                    </div>
 
-      <div class="form-group">
-        <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-      </div>
+                    <div class="form-group">
+                        <label for="cidade">
+                            <i class="fas fa-city"></i>Cidade
+                        </label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade">
+                    </div>
+                </div>
 
-      <div class="form-group">
-        <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro">
-      </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="endereco">
+                            <i class="fas fa-map-marker-alt"></i>Endereço
+                        </label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro">
+                    </div>
 
-      <div class="form-group">
-        <label for="cidade">Cidade</label>
-        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade">
-      </div>
-      <div class="form-group">
-        <label for="salario">Salario R$</label>
-        <input type="text" id="Salario" name="Salario" placeholder="Digite salario atual">
-      </div>
+                    <div class="form-group">
+                        <label for="salario">
+                            <i class="fas fa-money-bill-wave"></i>Salário R$
+                        </label>
+                        <input type="text" id="salario" name="salario" placeholder="Digite salário atual">
+                        <div class="error">Por favor, informe um valor válido</div>
+                    </div>
+                </div>
 
-      <div class="form-group">
-        <label for="Cargo">Cargo</label>
-        <select id="Cargo" name="Cargo" required>
-          <option value="">Selecione</option>
-          <option>Programador</option>
-          <option>Recepcionista</option>
-          <option>Consultor</option>
-          <option>Analista</option>
-          <option>Gerente</option>
-          <option>Auxiliar</option>
-          <option>Estagiario</option>
-        </select>
-      </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo" class="required">
+                            <i class="fas fa-briefcase"></i>Cargo
+                        </label>
+                        <select id="cargo" name="cargo" required>
+                            <option value="">Selecione</option>
+                            <option>Programador</option>
+                            <option>Recepcionista</option>
+                            <option>Consultor</option>
+                            <option>Analista</option>
+                            <option>Gerente</option>
+                            <option>Auxiliar</option>
+                            <option>Estagiário</option>
+                        </select>
+                        <div class="error">Por favor, selecione um cargo</div>
+                    </div>
+                </div>
 
-      <div class="form-actions">
-        <button type="submit" class="btn">Cadastrar</button>
-        <button type="reset" class="btn-secondary">Limpar</button>
-      </div>
-    </form>
-   </div> 
- </Section>
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">
+                        <i class="fas fa-eraser"></i>Limpar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>Cadastrar
+                    </button>
+                </div>
+            </form>
+            
+            <div class="success-page" id="successPage">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Cadastro realizado com sucesso!</h2>
+                <p>O funcionário foi cadastrado no sistema com sucesso.</p>
+                <button class="btn btn-primary" onclick="window.location.href='Cad_funcionario.html'">
+                    <i class="fas fa-plus"></i>Novo Cadastro
+                </button>
+            </div>
+        </div>
+    </Section>
+    
+    <footer>
+        <p>Gestor RH &copy; 2025 - Sistema de Gestão de Recursos Humanos</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('cadastroForm');
+            const successPage = document.getElementById('successPage');
+            
+            // Máscara para telefone
+            const telefoneInput = document.getElementById('telefone');
+            telefoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 11) value = value.substring(0, 11);
+                
+                if (value.length > 0) {
+                    if (value.length <= 2) {
+                        value = `(${value}`;
+                    } else if (value.length <= 7) {
+                        value = `(${value.substring(0,2)}) ${value.substring(2)}`;
+                    } else {
+                        value = `(${value.substring(0,2)}) ${value.substring(2,7)}-${value.substring(7)}`;
+                    }
+                }
+                
+                e.target.value = value;
+            });
+            
+            // Formatação do salário
+            const salarioInput = document.getElementById('salario');
+            salarioInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                value = (value/100).toFixed(2) + '';
+                value = value.replace(".", ",");
+                value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                e.target.value = value ? 'R$ ' + value : '';
+            });
+            
+            // Validação do formulário
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Remover erros anteriores
+                const errorGroups = document.querySelectorAll('.form-group.error');
+                errorGroups.forEach(group => {
+                    group.classList.remove('error');
+                });
+                
+                let isValid = true;
+                
+                // Validar campos obrigatórios
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    }
+                });
+                
+                // Validar e-mail
+                const emailField = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailField.value && !emailRegex.test(emailField.value)) {
+                    emailField.closest('.form-group').classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validar telefone (se preenchido)
+                if (telefoneInput.value) {
+                    const phoneDigits = telefoneInput.value.replace(/\D/g, '');
+                    if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+                        telefoneInput.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    }
+                }
+                
+                // Validar salário (se preenchido)
+                if (salarioInput.value) {
+                    const salaryValue = parseFloat(salarioInput.value.replace('R$ ', '').replace('.', '').replace(',', '.'));
+                    if (isNaN(salaryValue) || salaryValue <= 0) {
+                        salarioInput.closest('.form-group').classList.add('error');
+                        isValid = false;
+                    }
+                }
+                
+                if (isValid) {
+                    // Simular envio do formulário
+                    form.style.display = 'none';
+                    successPage.style.display = 'block';
+                    
+                    // Aqui você normalmente enviaria os dados para o servidor
+                    console.log('Dados do formulário:', {
+                        nome: document.getElementById('nome').value,
+                        email: document.getElementById('email').value,
+                        telefone: document.getElementById('telefone').value,
+                        cidade: document.getElementById('cidade').value,
+                        endereco: document.getElementById('endereco').value,
+                        salario: document.getElementById('salario').value,
+                        cargo: document.getElementById('cargo').value
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
