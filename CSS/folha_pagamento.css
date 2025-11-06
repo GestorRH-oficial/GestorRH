@@ -5,6 +5,7 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-image: url(../style/fundo\ cinza.png);
 }
 
 header {
@@ -12,7 +13,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     gap: 35%;
-    background-color: dodgerblue;
+    background-image: url(../style/fundo\ cinza.png);
     color: white;
     padding: 20px;
 }
@@ -82,18 +83,22 @@ footer {
     margin-top: 1000px ;
     text-align: center;
     padding: 30px;
-    background-color: dodgerblue;
+     background-image: url(../style/fundo\ cinza.png);
 }
 
 .folha-pagamento {
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding-left: 50px;
+    padding-left: 30px;
+    position: absolute;
+    left: 30px;
 }
+.cadastro-beneficio {
 
+}
 .folha-pagamento form label {
     display: block;
     margin-top: 10px;
