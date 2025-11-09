@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestorRH - Banco de Horas</title>
+    <link rel="stylesheet" href="../css/banco_horas.css">
+</head>
+<body>
+
+<header>
+    <img src="../style/LOGO.jpg" alt="logo da empresa">
+        <h1>Banco de Horas - GestorRH</h1>
+</header>
+
+<div class="container">
+
+    <h2>Visão Geral de Colaboradores</h2>
+    <p>Acompanhe o saldo de horas, horas extras e compensações de toda a equipe.</p>
+
+
+    <div class="filtros">
+        <input type="text" placeholder="Buscar colaborador">
+        <select>
+            <option>Setor</option>
+            <option>Analista</option>
+            <option>Financeiro</option>
+            <option>Desenvolvedor</option>
+            <option>Recepcionista</option>
+        </select>
+        <select>
+            <option>Período</option>
+            <option>Mês atual</option>
+            <option>Últimos 3 meses</option>
+            <option>Último ano</option>
+        </select>
+        <select>
+            <option>Status</option>
+            <option>Saldo positivo</option>
+            <option>Saldo negativo</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Colaborador</th>
+                <th>Cargo</th>
+                <th>Horas Trabalhadas</th>
+                <th>Horas Extras</th>
+                <th>Banco de Horas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria Lock</td>
+                <td>Analista</td>
+                <td>168h</td>
+                <td>12h</td>
+                <td>+8h</td>
+            </tr>
+            <tr>
+                <td>Carlos Augusto</td>
+                <td>Desenvolvedor</td>
+                <td>172h</td>
+                <td>20h</td>
+                <td>+14h</td>
+            </tr>
+            <tr>
+                <td>Eduardo Santos</td>
+                <td>Financeiro</td>
+                <td>160h</td>
+                <td>2h</td>
+                <td>-3h</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="resumo">
+        <strong>Resumo Geral:</strong><br>
+        • Total de horas extras: 34h<br>
+        • Colaboradores com saldo positivo: 2<br>
+        • Colaboradores com saldo negativo: 1<br>
+        • Maior acúmulo no período: Carlos Augusto (+14h)
+    </div>
+
+</div>
+
+<footer>
+    GestorRH - Sistema de Gestão de Pessoas
+</footer>
+
+</body>
+</html>

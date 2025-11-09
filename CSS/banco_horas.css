@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 28%;
+    background-color: dodgerblue;
+    margin-bottom: 50px;
+}
+
+img {
+    height: auto;
+    max-height: 120px;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.filtros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+select, input {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead {
+    background: rgb(30, 144, 255, 0.2);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.resumo {
+    margin-top: 25px;
+    background: rgb(30, 144, 255, 0.1);
+    padding: 15px;
+    border-left: 5px solid dodgerblue;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 13px;
+    color: #666;
+}
