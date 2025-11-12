@@ -7,48 +7,46 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-image: url(../style/tela\ de\ login.png);
+      background-image: url(../style/fundo\ cinza.png);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
 
     }
-
     .container {
-      margin: 20px auto 20px auto;
-      background: transparent;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
       text-align: center;
-      width: 350px;
+      width: 450px;
     }
-
-
-    h1 {
-      margin-bottom: 15px;
+    input {
+      display: block;
+      width: 90%;
+      margin: 8px auto;
+      padding: 8px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #registro {
+      margin-top: 15px;
+      font-weight: bold;
       color: #333;
     }
 
-
-    input {
-      display: block;
-      margin: 10px auto;
-      padding: 10px;
-      width: 80%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-
-    button {
-      background: dodgerblue;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      color: rgb(248, 250, 249);
-      cursor: pointer;
-      transition: 0.3s;
-      margin-top: 10px;
-    }
 
 
     .voltar {
@@ -63,19 +61,7 @@
       cursor: pointer;
       font-size: 16px;
     }
-
-
-    button:hover {
-      background: rgb(50, 110, 210);
-    }
-
-    .registro {
-      margin-top: 20px;
-      font-size: 16px;
-      color: #444;
-      text-align: left;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
-    }
+    
+    
 
 /* fim do css da tela de quem somos */

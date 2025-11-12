@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Relogio de ponto </title>
- <link rel="stylesheet" href="../css/relogio de ponto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relógio de Ponto</title>
+  <link rel="stylesheet" href="../CSS/relogio de ponto.css">
 </head>
 <body>
-  
- <div class="container">
+  <div class="container">
     <h1>Registro de Ponto</h1>
-    <input type="text" placeholder="Usuário">
-    <input type="password" placeholder="Senha">
-    <button>Registrar</button>
-  </div>   
-  <a href="../tela-login.html"><button class="voltar">Voltar</button></a>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="registrarPonto()">Registrar</button>
+    <p id="registro"></p>
+  </div>
+
+  <script>
+    function registrarPonto() {
+      const usuario = document.getElementById('usuario').value;
+      const senha = document.getElementById('senha').value;
+      const registro = document.getElementById('registro');
+
+      if (usuario === "" || senha === "") {
+        registro.innerText = "Preencha usuário e senha!";
+        registro.style.color = "red";
+        return;
+      }
+
+      const agora = new Date();
+      const dataHora = agora.toLocaleString('pt-BR');
+      registro.style.color = "green";
+      registro.innerText = `Ponto registrado por ${usuario} às ${dataHora}`;
+    }
+  </script>
+  <a href="../pages/menu.html"><button class="voltar">voltar</button></a>
+  
+  
 </body>
+
+
+
 </html>
