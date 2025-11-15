@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação Codigo</title>
     <link rel="stylesheet" href="../css/verificar_codigo.css">
+    <link rel="stylesheet" href="../script/cronometro_codigo.js">
 </head>
 <body>
 
@@ -22,8 +23,42 @@
         <label class="code-box"><input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dígito 6" ></label>
       </div>
 
+      <div class="timer">
+      <div class="muted-small" id="timer">Reenviar em <span id="cronometro">30</span> 
+    <span id="cronometro"></span><span class="small">s</span>
+  </div>
+
+  <script>
+    // Segurança: só executa quando DOM estiver pronto
+    document.addEventListener('DOMContentLoaded', () => {
+      let tempo = 30;
+      const span = document.getElementById('cronometro');
+
+      if (!span) {
+        console.error('Elemento #cronometro não encontrado.');
+        return;
+      }
+
+      // atualiza imediatamente a tela (sem esperar 1s)
+      span.textContent = tempo;
+
+      const intervalo = setInterval(() => {
+        tempo -= 1;
+
+        // evita mostrar números negativos
+        if (tempo < 0) {
+          clearInterval(intervalo);
+          // recarrega a página — caso não queira recarregar, comente a linha abaixo
+          location.reload();
+          return;
+        }
+
+        span.textContent = tempo;
+      }, 1000);
+    });
+  </script>
       <div class="actions">
-        <div class="muted small" id="timer">Reenviar em <span id="count">00:30</span></div>
+
         <button type="button" class="resend" id="resendBtn" disabled>Reenviar código</button>
         <button type="submit" class="primary" id="submitBtn" disabled>Verificar</button>
       </div>
