@@ -122,8 +122,8 @@ label {
     }
 
 .field{
-      background:#fbfdff;
-      border:1px solid #e6eefb;
+      background:#fbfdff39;
+      border:1px solid;
       padding:12px 40px;
       border-radius:10px;
     }
