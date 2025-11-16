@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./script/index.js"></script>
-
+    <script src="./script/index.js" defer></script>
 </head>
 
 <body>
     <div class="fundo">
-    <div class="tela-login">
+        <div class="tela-login">
 
-        <img src="style/LOGO.jpg" alt="logo">
+            <img src="style/LOGO.jpg" alt="logo">
 
-        <input type="text" placeholder="Usuário ">
-        <input type="password" placeholder="Senha ">
+            <input type="text" id="usuario" placeholder="Usuário">
+            <input type="password" id="senha" placeholder="Senha">
 
-        <a href="./pages/menu.html" target="_blank" type="submit"><button>Entrar</button></a>
-        <section>
-        <a href="./pages/esqueci_senha.html" target="_blank" class="text button">Esqueci a senha </a>
-        </section>
+            <button id="btnEntrar">Entrar</button>
+
+            <section>
+                <a href="./pages/esqueci_senha.html" target="_blank" class="text button">Esqueci a senha</a>
+            </section>
+        </div>
+
+        <footer>
+            <p>@ 2025 - GestorRH / Todos direitos reservados.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>@ 2025 - GestorRH/Todos direitos reservados.</p>
-    </footer>
 </body>
 
 </html>
