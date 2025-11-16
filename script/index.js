@@ -1,39 +1,21 @@
-// script.js
-function ajustarTela() {
-    const tela = document.querySelector('.tela-login');
-    const largura = window.innerWidth;
+document.addEventListener("DOMContentLoaded", () => {
+    const btnEntrar = document.getElementById("btnEntrar");
 
-    if (largura < 500) {
-        tela.style.width = '85%';
-        tela.style.padding = '20px';
-    } else if (largura < 900) {
-        tela.style.width = '50%';
-        tela.style.padding = '30px';
-    } else {
-        tela.style.width = '300px';
-        tela.style.padding = '40px';
-    }
-}
+    btnEntrar.addEventListener("click", () => {
+        const usuario = document.getElementById("usuario").value;
+        const senha = document.getElementById("senha").value;
 
-window.addEventListener('load', ajustarTela);
-window.addEventListener('resize', ajustarTela);
+        // Verificação básica
+        if (usuario === "" || senha === "") {
+            alert("Preencha usuário e senha!");
+            return;
+        }
 
-// script.js
-function ajustarTela() {
-    const tela = document.querySelector('.tela-login');
-    const largura = window.innerWidth;
+        // Aqui você poderia validar com um banco futuramente.
+        // Por enquanto só vamos deixar passar.
+        alert(`Login realizado por: ${usuario}`);
 
-    if (largura < 500) {
-        tela.style.width = '85%';
-        tela.style.padding = '20px';
-    } else if (largura < 900) {
-        tela.style.width = '50%';
-        tela.style.padding = '30px';
-    } else {
-        tela.style.width = '300px';
-        tela.style.padding = '40px';
-    }
-}
-
-window.addEventListener('load', ajustarTela);
-window.addEventListener('resize', ajustarTela);  
+        // Redireciona para o menu
+        window.location.href = "./pages/menu.html";
+    });
+});
