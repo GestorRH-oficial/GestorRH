@@ -4,17 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro De Funcionarios</title>
-    <link rel="stylesheet" href="../css/index.css">
-    <script src="../script/cad_funcionario.js"></script>
+    <title>Cadastro de Funcionários</title>
 
+    <link rel="stylesheet" href="../CSS/cadastro_funcionarios.css">
+    <script defer src="../script/cad_funcionario.js"></script>
 </head>
 
 <body>
- <Section class="cfuncionarios">
+  
+
+  
+<section class="cfuncionarios">
+  <header>
+         <h2>Cadastro de Funcionário</h2>
+  </header>
+  <form class="form-cadastro" id="formCadastro">
+      
   <div class="container">
-    <form class="form-cadastro">
-      <h2>Cadastro de Funcionario</h2>
+    
+    
 
       <div class="form-group">
         <label for="nome">Nome Completo</label>
@@ -28,26 +36,32 @@
 
       <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
       </div>
 
       <div class="form-group">
         <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro">
+        <input type="text" id="endereco" name="endereco" placeholder="Rua, Qd, Lt">
+      </div>
+
+      <div class="form-group">
+        <label for="cidade">bairro</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro">
       </div>
 
       <div class="form-group">
         <label for="cidade">Cidade</label>
         <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade">
       </div>
+
       <div class="form-group">
-        <label for="salario">Salario R$</label>
-        <input type="text" id="Salario" name="Salario" placeholder="Digite salario atual">
+        <label for="salario">Salário (R$)</label>
+        <input type="number" id="salario" name="salario" placeholder="Digite o salário atual" required>
       </div>
 
       <div class="form-group">
-        <label for="Cargo">Cargo</label>
-        <select id="Cargo" name="Cargo" required>
+        <label for="cargo">Cargo</label>
+        <select id="cargo" name="cargo" required>
           <option value="">Selecione</option>
           <option>Programador</option>
           <option>Recepcionista</option>
@@ -55,7 +69,7 @@
           <option>Analista</option>
           <option>Gerente</option>
           <option>Auxiliar</option>
-          <option>Estagiario</option>
+          <option>Estagiário</option>
         </select>
       </div>
 
@@ -63,8 +77,11 @@
         <button type="submit" class="btn">Cadastrar</button>
         <button type="reset" class="btn-secondary">Limpar</button>
       </div>
+
     </form>
-   </div> 
- </Section>
+  </div> 
+</section>
+<a href="../pages/menu.html"><button class="voltar">Sair</button></a>
+
 </body>
 </html>
