@@ -1,0 +1,129 @@
+body {
+            background-image: url(../style/fundo\ cinza.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        header {
+        background: #f9fafae3;
+        color: black;
+        text-align: center;
+        padding: 2rem 1rem;
+        border-radius: 12px;
+        margin: 1em 0;    
+}
+
+
+        header h1 { font-size: 26px; }
+        header p { color: #232425; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 330px;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color:#232425;
+            
+        }
+
+        input, select, textarea {
+            width: 80%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 12px;
+        }
+
+        .row { display: flex; gap: 10px; }
+
+        .btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn:hover { background-color: rgb(50, 110, 210); }
+
+        .danger { background: #e63946; }
+        .danger:hover { background: #c62828; }
+
+        .success { background: #28a745; }
+        .success:hover { background: #208f38; }
+
+        .secondary { background: transparent; border: 1px solid #777; color: #333; }
+        .secondary:hover { background: #ddd; }
+
+        .aprovacao-pendente {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+            margin-top: 10px;
+        }
+
+        .aprovacao-pendente.mostrar { display: block; }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .modal-buttons { display: flex; gap: 10px; justify-content: center; }
+
+        .partial-block, .sell-block { display: none; }
+        .voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
