@@ -2,70 +2,154 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Benefícios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Benefícios e Pagamentos</title>
+    <!-- Mantenha o link para o seu arquivo CSS -->
     <link rel="stylesheet" href="../css/folha_pagamento.css">
+    <!-- Removida a linha incorreta que linkava JS via CSS link -->
+    <!-- NOVO: Link para a biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
 </head>
 <body>
-    <header>
-        <img src="../style/LOGO.jpg" alt="logo gestorRH" class="logo">
-        <h1>GestorRH</h1>
-    </header>
-<section class="folha-pagamento">
-    <h2>Folha de Pagamento</h2>
-    <form>
-        <label for="funcionario-pag">Funcionário:</label>
-        <select id="funcionario-pag" name="funcionario-pag">
-            <option value="">Selecione</option>
-            <option value="1">Maria Lock</option>
-            <option value="2">Eduardo Santos</option>
-            <option value="3">Carlos Augusto</option>
-        </select>
+    <div class="container">
+        <header>
+            <h1>GestorRH</h1>
+        </header>
+        
+        <!-- Adicionei a classe card aqui para aplicar o estilo -->
+        <section class="card"> 
+            <h2>Folha de Pagamento</h2>
+            
+            <div class="grid">
+                <div class="form-container">
+                    <form>
+                        <label for="funcionario-pag">Funcionário:</label>
+                        <select id="funcionario-pag" name="funcionario-pag">
+                            <option value="">Selecione</option>
+                            <option value="1">Maria Lock</option>
+                            <option value="2">Eduardo Santos</option>
+                            <option value="3">Carlos Augusto</option>
+                        </select>
 
-        <label for="salario-base">Salário Base:</label>
-        <input type="text" id="salario-base" name="salario-base" placeholder="Ex: 3000">
+                        <div class="row">
+                            <div style="flex: 1;">
+                                <label for="salario-base">Salário Base:</label>
+                                <input type="text" id="salario-base" name="salario-base" placeholder="Ex: 3000">
+                            </div>
+                        </div>
 
-        <label for="descontos">Descontos:</label>
-        <input type="text" id="descontos" name="descontos" placeholder="Ex: 200">
+                        <div class="row">
+                            <div style="flex: 1;">
+                                <label for="descontos">Descontos:</label>
+                                <input type="text" id="descontos" name="descontos" placeholder="Ex: 200">
+                            </div>
+                            <div style="flex: 1;">
+                                <label for="beneficios-input">Benefícios:</label>
+                                <input type="text" id="beneficios-input" name="beneficios-input" placeholder="Ex: 500">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn">Gerar Folha</button>
+                    </form>
+                </div>
+            </div>
 
-        <label for="beneficios">Benefícios:</label>
-        <input type="text" id="beneficios" name="beneficios" placeholder="Ex: 500">
+            <div style="margin-top: 30px;">
+                <h3>Resumo da Folha</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Funcionário</th>
+                            <th>Salário Base</th>
+                            <th>Descontos</th>
+                            <th>Benefícios</th>
+                            <th>Salário Líquido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maria Lock</td>
+                            <td>R$ 3000,00</td>
+                            <td>R$ 200,00</td>
+                            <td>R$ 500,00</td>
+                            <td>R$ 3300,00</td>
+                        </tr>
+                        <tr>
+                            <td>Eduardo Santos</td>
+                            <td>R$ 4000,00</td>
+                            <td>R$ 300,00</td>
+                            <td>R$ 600,00</td>
+                            <td>R$ 4300,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- ... (restante do body) ... -->
 
-        <button type="submit">Gerar Folha</button>
-    </form>
+        <!-- ELEMENTO DE RESUMO DA ANIMAÇÃO -->
+        <div id="resumo-gerado" class="resumo-animado">
+            <h4>Folha de Pagamento de <span id="nome-funcionario"></span> Gerada com Sucesso!</h4>
+            <p>Salário Líquido Calculado: <strong>R$ <span id="salario-liquido">0.00</span></strong></p>
 
-    <h3>Resumo da Folha</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Funcionário</th>
-                <th>Salário Base</th>
-                <th>Descontos</th>
-                <th>Benefícios</th>
-                <th>Salário Líquido</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Maria Lock</td>
-                <td>3000</td>
-                <td>200</td>
-                <td>500</td>
-                <td>3300</td>
-            </tr>
-            <tr>
-                <td>Eduardo Santos</td>
-                <td>4000</td>
-                <td>300</td>
-                <td>600</td>
-                <td>4300</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-<a href="../pages/menu.html">
-<button class="voltar">Voltar</button>
+            <!-- ADICIONE ESTE BOTÃO: -->
+            <button type="button" class="btn download-btn" onclick="simularDownload()">
+                <i class="fas fa-download"></i> Baixar Contracheque
+            </button>
+
+            <button type="button" class="btn secondary" onclick="fecharResumo()">Fechar</button>
+        </div>
+        <!-- FIM ELEMENTO DE RESUMO -->
+
+    </section>
+
     <footer>
         <p>@ 2025 - GestorRH/Todos direitos reservados.</p>
     </footer>
-</body>
-</html>
+</div>
+
+<!-- ... (botão voltar) ... -->
+
+<!-- ADICIONE/ATUALIZE ESTE BLOCO DE SCRIPT AQUI: -->
+<script>
+    // Função principal que lida com o clique e a animação
+    function gerarFolha(event) {
+        // 1. Previne o comportamento padrão do formulário (que recarregaria a página)
+        event.preventDefault();
+
+        // 2. Captura os valores de entrada (usando IDs do HTML)
+        const funcionarioSelect = document.getElementById('funcionario-pag');
+        const nomeFuncionario = funcionarioSelect.options[funcionarioSelect.selectedIndex].text;
+        const salarioBase = parseFloat(document.getElementById('salario-base').value) || 0;
+        const descontos = parseFloat(document.getElementById('descontos').value) || 0;
+        const beneficios = parseFloat(document.getElementById('beneficios-input').value) || 0; 
+
+        // 3. Calcula o salário líquido
+        const salarioLiquido = salarioBase + beneficios - descontos;
+
+        // 4. Atualiza o conteúdo do elemento de resumo
+        document.getElementById('nome-funcionario').textContent = nomeFuncionario;
+        document.getElementById('salario-liquido').textContent = salarioLiquido.toFixed(2).replace('.', ',');
+
+        // 5. Mostra o elemento de resumo com a animação CSS
+        const resumoDiv = document.getElementById('resumo-gerado');
+        resumoDiv.classList.add('show');
+    }
+
+    // Função para fechar o resumo (chamada pelo botão "Fechar" no HTML)
+    function fecharResumo() {
+        const resumoDiv = document.getElementById('resumo-gerado');
+        resumoDiv.classList.remove('show');
+    }
+
+    // FUNÇÃO DE SIMULAÇÃO DE DOWNLOAD ATUALIZADA
+    function simularDownload() {
+        alert("Download do contracheque iniciado! (Simulação)");
+        // Aqui você integraria a lógica real de geração de PDF/arquivo.
+    }
+
+    // 6. Adiciona o "ouvinte de evento" ao formulário
+    const form = document.querySelector('form'); 
+    form.addEventListener('submit', gerarFolha);
+</script>
+
