@@ -1,0 +1,55 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(../style/fundo\ cinza.png);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 380px;
+            margin: 14em auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            margin: 15px 0;
+            padding: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .enviar {
+            background:dodgerblue;
+            color: white;
+        }
+
+        .voltar {
+            background: #555;
+            color: white;
+        }
+
+        .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #444;
+            font-style: italic;
+        }
+    

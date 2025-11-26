@@ -279,6 +279,202 @@
     </style>
 </head>
 <body>
+
+<div class="container">
+    <header>
+        <h1>Gestao de Ponto</h1>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <label for="Funcionario">Colaborador</label>
+            <select id="funcionario">
+                <option>Selecione...</option>
+                <option>Samuel</option>
+                <option>Josimar</option>
+                <option>Wesley</option>
+            </select>
+
+            <h5>Historico De Marcações</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20/10/2025</td>
+                        <td>08:00</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>19/10/2025</td>
+                        <td>08:15</td>
+                        <td>–</td>
+                        <td>13:00</td>
+                        <td>–</td>
+                        <td><span class="tag abs">Falta de marcação</span></td>
+                    </tr>
+                    <tr>
+                        <td>18/10/2025</td>
+                        <td>08:01</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>17/10/2025</td>
+                        <td>08:15</td>
+                        <td>12:00</td>
+                        <td>–</td>
+                        <td>17:00</td>
+                        <td><span class="tag abs">Falta de marcação</span></td>
+                    </tr>
+                    <tr>
+                        <td>16/10/2025</td>
+                        <td>08:03</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>15/10/2025</td>
+                        <td>08:00</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>14/10/2025</td>
+                        <td>07:59</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>13/10/2025</td>
+                        <td>08:02</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:04</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>12/10/2025</td>
+                        <td>08:00</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:25</td>
+                        <td><span class="tag h">Hora Extra</span></td>
+                    </tr>
+                    <tr>
+                        <td>11/10/2025</td>
+                        <td>08:05</td>
+                        <td>–</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag abs">Falta de marcação</span></td>
+                    </tr>
+                    <tr>
+                        <td>10/10/2025</td>
+                        <td>08:00</td>
+                        <td>12:00</td>
+                        <td>13:00</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                    <tr>
+                        <td>09/10/2025</td>
+                        <td>08:00</td>
+                        <td>12:01</td>
+                        <td>13:01</td>
+                        <td>17:00</td>
+                        <td><span class="tag ok">Completo</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="card">
+            <h2>Abonos</h2>
+            <p class="muted">Solicite abono de marcações incorretas:</p>
+
+            <div>
+                <label for="data">Data e Horario</label>
+                <input type="datetime-local" name="Horario 1" id="">
+            </div>
+
+            <label for="motivo">Motivo</label>
+            <select id="motivo">
+                <option>Selecione...</option>
+                <option>Atestado médico</option>
+                <option>Debito Banco De Horas</option>
+                <option>Esquecimento</option>
+                <option>Serviço externo</option>
+                <option>Manutenção</option>
+                <option>Treinamento</option>
+                <option>Problemas Com Transporte Publico</option>
+                <option>Outros</option>
+            </select>
+
+            <label for="justificativa">Motivo</label>
+            <textarea id="justificativa" rows="4" placeholder="Descreva o motivo..."></textarea>
+
+            <button id="btn-aprovar" type="button" class="btn">Aprovar</button>
+            <button id="btn-anexar" type="button" class="btn">Anexar Documento</button>
+        </aside>
+    </main>
+
+    <footer>
+        <p>@ 2025 - GestorRH/Todos direitos reservados.</p>
+    </footer>
+
+    <a href="../pages/menu.html">
+        <button class="voltar">Voltar</button>
+    </a>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnAprovar = document.getElementById("btn-aprovar");
+    const btnAnexar = document.getElementById("btn-anexar");
+
+    
+    btnAprovar.addEventListener("click", function () {
+    alert("✔ Abono aprovado em Processamento!");
+
+    
+    document.querySelector('input[type="datetime-local"]').value = "";
+
+    
+    document.getElementById("motivo").selectedIndex = 0;
+
+    
+    document.getElementById("justificativa").value = "";
+   });
+    
+    btnAnexar.addEventListener("click", function () {
+        window.open("uploud_gestãop.html", "_blank");
+    });
+
+});
+</script
+<body>
     <div class="container">
         <header>
             <h1>Gestao de Ponto</h1>
@@ -504,7 +700,6 @@
             });
         });
     </script>
-   
-   
+  
 </body>
 </html>
