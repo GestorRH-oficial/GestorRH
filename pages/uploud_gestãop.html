@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anexar Documento</title>
+    <link rel="stylesheet" href="../CSS/uploud_gestãoponto.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Anexar Documento</h2>
+
+    <input type="file" id="arquivo">
+    <p class="file-name" id="nome-arquivo">Nenhum arquivo selecionado</p>
+
+    <button class="btn enviar" id="enviarBtn">Enviar Documento</button>
+    <a href="../pages/gestao de ponto.html"><button class="btn voltar" onclick="window.close()">Fechar</button></a>
+</div>
+
+
+<script>
+
+document.getElementById("arquivo").addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        document.getElementById("nome-arquivo").textContent = "Arquivo selecionado: " + file.name;
+    } else {
+        document.getElementById("nome-arquivo").textContent = "Nenhum arquivo selecionado";
+    }
+});
+
+
+document.getElementById("enviarBtn").addEventListener("click", function () {
+    const arquivo = document.getElementById("arquivo").files[0];
+
+    if (!arquivo) {
+        alert("⚠ Selecione um arquivo antes de enviar!");
+        return;
+    }
+
+    alert("✔ Arquivo '" + arquivo.name + "' enviado com sucesso!");
+});
+</script>
+
+
+</body>
+</html>

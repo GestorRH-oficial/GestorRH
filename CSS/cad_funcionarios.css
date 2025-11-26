@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-image: url(../style/fundo\ cinza.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+  background: #f9fafa59;
+  color: black;
+  text-align: center;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+.container {
+    background: #ffffff42;
+    width: 450px;
+    padding: 2.5em;
+    border-radius: 1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to   {opacity: 1; transform: translateY(0);}
+}
+
+
+.form-cadastro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.form-group {
+    margin-bottom: 2px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0 0 4px rgba(0, 123, 255, .5);
+}
+
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn {
+    flex: 1;
+    background: linear-gradient(45deg, rgb(0, 110, 255), rgb(80, 160, 255));
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, rgb(0, 90, 220), rgb(60, 140, 240));
+}
+
+
+.btn-secondary {
+    flex: 1;
+    background: #d9534f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #c9302c;
+}
+
+
+.mensagem {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2ecc71;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all .4s;
+    z-index: 9999;
+}
+
+.mensagem.erro {
+    background: #e74c3c;
+}
+
+.mensagem.mostrar {
+    top: 20px;
+}
+
+ .voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
