@@ -4,9 +4,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestao Ponto</title>
-    <link rel="stylesheet" href="../css/gestao_de_ponto.css">
-</head>
+    <style>
+        /* inicio do css da tela de gestao de pontos */
 
+        body {
+            background-image: url(../style/fundo\ cinza.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 100vh;
+            margin: 40;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        header h1 { font-size: 24px; margin-bottom: 6px; }
+        header p { color: #232425; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.774);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        form .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color:#232425;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.08);
+            color: inherit;
+        }
+
+        .btn {
+            background-color: #3b82f6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn:hover {
+            background-color: rgb(50, 130, 210);
+        }
+
+        .btn.secondary:hover {
+            background-color: rgb(50, 110, 210);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        th {
+            color: #232425;
+        }
+
+        .tag {
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-size: 12px;
+        }
+
+        .tag.ok {
+            background: rgba(16,185,129,0.15);
+            color: var(--success);
+        }
+
+        .tag.abs {
+            background: rgba(239,68,68,0.1);
+            color: var(--danger);
+        }
+        .tag.h{
+            background-color: #cee40c46;
+            color: var(rgba(0,0,0,0.4));
+        }
+
+        .muted {
+            color: #232425;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        footer {
+            margin-top: 24px;
+            position: relative;
+            color: black;
+            font-size: 13px;
+            width: 90%;
+        }
+
+        body.light {
+            background: linear-gradient(180deg, #f9fafb, #ffffff);
+            color: #1f2937;
+        }
+
+        body.light .card {
+            background: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        body.light header p,
+        body.light .muted { color: #6b7280; }
+
+        body.light input,
+        body.light select,
+        body.light textarea {
+            background: #f9fafb;
+            color: #111827;
+            border: 1px solid #e5e7eb;
+        }
+
+        body.light th {
+            color: #0556f7;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        body.light td {
+            border-bottom: 1px dashed #e5e7eb;
+            color: #111827;
+        }
+
+        body.light .btn.secondary {
+            border: 1px solid #d1d5db;
+            color: #455774;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0);
+            color: black;
+            text-align: center;
+            bottom: 0;
+            width: 90%;
+            margin-bottom: 10px;
+            top: 150px;
+        }
+
+       
+                .btn-voltar:hover {
+            background-color: #5a6268;
+        }
+
+        /* Estilos para o modal de confirmação */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .modal h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .modal p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn-confirmar {
+            background-color: #28a745;
+        }
+
+        .btn-confirmar:hover {
+            background-color: #218838;
+        }
+
+        .btn-cancelar {
+            background-color: #6c757d;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #5a6268;
+        }
+
+        /* Estilo para o status de aprovação pendente */
+        .aprovacao-pendente {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .aprovacao-pendente.mostrar {
+            display: block;
+        }
+
+        /* fim do css da tela de gestao do ponto */
+    </style>
+</head>
 <body>
 
 <div class="container">
@@ -202,7 +473,233 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-</script>
+</script
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestao de Ponto</h1>
+        </header>
 
+        <main class="grid">
+            <section class="card">
+                <label for="Funcionario">Colaborador</label>
+                <select id="funcionario">
+                    <option>Selecione...</option>
+                    <option>Samuel</option>
+                    <option>Josimar</option>
+                    <option>Wesley</option>
+                </select>
+
+                <h5>Historico De Marcações</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Entrada</th>
+                            <th>Saída</th>
+                            <th>Entrada</th>
+                            <th>Saída</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20/10/2025</td>
+                            <td>08:00</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>19/10/2025</td>
+                            <td>08:15</td>
+                            <td>–</td>
+                            <td>13:00</td>
+                            <td>–</td>
+                            <td><span class="tag abs">Falta de marcação</span></td>
+                        </tr>
+                        <tr>
+                            <td>18/10/2025</td>
+                            <td>08:01</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>17/10/2025</td>
+                            <td>08:15</td>
+                            <td>12:00</td>
+                            <td>–</td>
+                            <td>17:00</td>
+                            <td><span class="tag abs">Falta de marcação</span></td>
+                        </tr>
+                        <tr>
+                            <td>16/10/2025</td>
+                            <td>08:03</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>15/10/2025</td>
+                            <td>08:00</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>14/10/2025</td>
+                            <td>07:59</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2025</td>
+                            <td>08:02</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:04</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>12/10/2025</td>
+                            <td>08:00</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:25</td>
+                            <td><span class="tag h">Hora Extra</span></td>
+                        </tr>
+                        <tr>
+                            <td>11/10/2025</td>
+                            <td>08:05</td>
+                            <td>–</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag abs">Falta de marcação</span></td>
+                        </tr>
+                        <tr>
+                            <td>10/10/2025</td>
+                            <td>08:00</td>
+                            <td>12:00</td>
+                            <td>13:00</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                        <tr>
+                            <td>09/10/2025</td>
+                            <td>08:00</td>
+                            <td>12:01</td>
+                            <td>13:01</td>
+                            <td>17:00</td>
+                            <td><span class="tag ok">Completo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <aside class="card">
+                <h2>Abonos</h2>
+                <p class="muted">Solicite abono de marcações incorretas:</p>
+
+                <div>
+                    <label for="data">Data e Horario</label>
+                    <input type="datetime-local" name="Horario 1" id="">
+                </div>
+
+                <label for="motivo">Motivo</label>
+                <select id="motivo">
+                    <option>Selecione...</option>
+                    <option>Atestado médico</option>
+                    <option>Debito Banco De Horas</option>
+                    <option>Esquecimento</option>
+                    <option>Serviço externo</option>
+                    <option>Manutenção</option>
+                    <option>Treinamento</option>
+                    <option>Problemas Com Transporte Publico</option>
+                    <option>Outros</option>
+                </select>
+
+                <label for="justificativa">Justificativa</label>
+                <textarea id="justificativa" rows="4" placeholder="Descreva o motivo..."></textarea>
+
+                <div class="aprovacao-pendente" id="aprovacaoPendente">
+                    <strong>Aprovado! Confirmação pendente</strong>
+                </div>
+
+                <div style="margin-top: 15px;">
+                  <button type="button" class="btn" style="margin-top: 10px; width: 50%;">Anexar Documento</button>
+                <button type="button" class="btn" id="btnAprovar">Aprovar</button>
+                </div>
+                            </aside>
+        </main>
+
+        <footer>
+            <p>@ 2025 - GestorRH/Todos direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal" id="modalConfirmacao">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h2>Confirmar Aprovação</h2>
+            <p>Tem certeza que deseja aprovar este pedido de abono?</p>
+            <div class="modal-buttons">
+                <button class="btn btn-cancelar" id="btnCancelar">Cancelar</button>
+                <button class="btn btn-confirmar" id="btnConfirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos DOM
+            const btnVoltar = document.getElementById('btnVoltar');
+            const btnAprovar = document.getElementById('btnAprovar');
+            const modalConfirmacao = document.getElementById('modalConfirmacao');
+            const btnCancelar = document.getElementById('btnCancelar');
+            const btnConfirmar = document.getElementById('btnConfirmar');
+            const aprovacaoPendente = document.getElementById('aprovacaoPendente');
+
+            // Botão Aprovar - abre o modal de confirmação
+            btnAprovar.addEventListener('click', function() {
+                modalConfirmacao.style.display = 'flex';
+            });
+
+            // Botão Cancelar no modal - fecha o modal
+            btnCancelar.addEventListener('click', function() {
+                modalConfirmacao.style.display = 'none';
+            });
+
+            // Botão Confirmar no modal - processa a aprovação
+            btnConfirmar.addEventListener('click', function() {
+                // Fecha o modal
+                modalConfirmacao.style.display = 'none';
+               
+                // Mostra a mensagem "Aprovado! Confirmação pendente"
+                aprovacaoPendente.classList.add('mostrar');
+               
+                // Desabilita o botão de aprovar
+                btnAprovar.disabled = true;
+                btnAprovar.textContent = 'Aprovado';
+                btnAprovar.style.background = '#6c757d';
+                btnAprovar.style.cursor = 'not-allowed';
+            });
+
+            // Fechar modal clicando fora dele
+            window.addEventListener('click', function(event) {
+                if (event.target === modalConfirmacao) {
+                    modalConfirmacao.style.display = 'none';
+                }
+            });
+        });
+    </script>
+  
 </body>
 </html>
