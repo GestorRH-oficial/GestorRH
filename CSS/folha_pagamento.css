@@ -6,6 +6,10 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(../style/fundo\ cinza.png);
+    align-items: center; 
+    text-align: center;
+    width: center;
+    position: relative;
 }
 
 header {
@@ -17,6 +21,15 @@ header {
     color: white;
     padding: 20px;
 }
+header h1 {
+    background: #ffffff42;
+    width: 450px;
+    padding: 2.5em;
+    border-radius: 1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease;
+    margin-top: 20px;
+}
 
 header .logo {
     height: auto;
@@ -27,8 +40,12 @@ section {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 45%;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    align-items: center;
+    text-align: center;
+    width: center;
+    left: 500px;
+    position: absolute;
 }
 
 form label {
@@ -74,18 +91,21 @@ th, td {
 }
 
 footer {
-    margin-top: 1000px ;
+    margin-top: 800px;
     text-align: center;
     padding: 30px;
      background-image: url(../style/fundo\ cinza.png);
 }
 
 .folha-pagamento {
-    background-color: white;
-    margin-top: 70px;
-    position: absolute;
     left: 30px;
+    background-color: #ffffff42;
+    padding: 2.5em;
+    border-radius: 1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: relative;
 }
+
 
 .folha-pagamento form label {
     display: block;
@@ -132,5 +152,17 @@ footer {
     padding: 10px;
     text-align: left;
 }
+ .voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
 /* fim do css da tela de folha de pagamento*/
