@@ -18,16 +18,14 @@ body {
   padding: 1rem;
 }
 header {
-  background: rgba(255, 255, 255, 0.774);
-  color: black;
-  text-align: center;
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  margin: 1em 0em;
+        background: #f9fafae3;
+        color: black;
+        text-align: center;
+        padding: 2rem 1rem;
+        border-radius: 12px;
+        margin: 1em 0;    
 }
 
-header h1 { font-size: 24px; margin-bottom: 6px; }
-header p { color: #232425; }
 
 .grid {
   display: grid;
@@ -61,7 +59,7 @@ label {
 }
 
 input, select, textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.08);
@@ -200,6 +198,7 @@ footer {
       cursor: pointer;
       font-size: 16px;
     }
+
     
 
 /* fim do css da tela de gestao do ponto */
