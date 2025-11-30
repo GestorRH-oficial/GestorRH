@@ -1,61 +1,9 @@
-// Pega o formulário
-const form = document.querySelector('.form-cadastro');
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // impede de recarregar a página
-
-    // pega os valores digitados
-    const nome = document.querySelector('#nome').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const cargo = document.querySelector('#Cargo').value;
-
-    // validação simples
-    if (nome === '' || email === '' || cargo === '') {
-        alert('Preencha todos os campos obrigatórios.');
-        return;
-    }
-
-    // só pra parecer profissional
-    alert(`Funcionário cadastrado com sucesso:
-Nome: ${nome}
-E-mail: ${email}
-Cargo: ${cargo}`);
-
-    form.reset();
-});
-document.addEventListener("DOMContentLoaded", () => {
-    
+    // Seleciona o formulário correto
     const form = document.getElementById("formCadastro");
 
-    // ---- Função de mensagem visual ----
-    function mostrarMensagem(texto, tipo = "sucesso") {
-        const msg = document.createElement("div");
-        msg.className = `mensagem ${tipo}`;
-        msg.innerText = texto;
-
-        document.body.appendChild(msg);
-
-        setTimeout(() => msg.classList.add("mostrar"), 50);
-        setTimeout(() => {
-            msg.classList.remove("mostrar");
-            setTimeout(() => msg.remove(), 500);
-        }, 3000);
-    }
-
-    // ---- Função de validação ----
-    function validarCampos() {
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const cargo = document.getElementById("cargo").value.trim();
-
-        if (!nome || !email || !cargo) {
-            mostrarMensagem("Preencha todos os campos obrigatórios!", "erro");
-            return false;
-        }
-        return true;
-    }
-
-    // ---- Máscara de telefone ----
+    // Campo de telefone com máscara
     const telInput = document.getElementById("telefone");
     telInput.addEventListener("input", function () {
         let v = this.value.replace(/\D/g, "");
@@ -69,14 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ---- Envio do formulário ----
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
+    // Ação ao enviar o formulário
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();  // Impede o recarregamento
 
-        if (!validarCampos()) return;
+        // Obtém valores
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const cargo = document.getElementById("cargo").value.trim();
 
-        mostrarMensagem("Cadastro salvo com sucesso!");
+        // Validação simples
+        if (!nome || !email || !cargo) {
+            alert("Preencha todos os campos obrigatórios.");
+            return;
+        }
+
+        // Mensagem de sucesso
+        alert("Cadastro efetuado com sucesso!");
+
+        // Limpa o formulário
         form.reset();
     });
 });
-
