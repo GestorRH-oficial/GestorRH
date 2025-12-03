@@ -1,4 +1,3 @@
-/* fim do css da tela de folha de pagamento */
 
 body {
     font-family: Arial, sans-serif;
@@ -96,9 +95,7 @@ footer {
     position: absolute;
     left: 30px;
 }
-.cadastro-beneficio {
 
-}
 .folha-pagamento form label {
     display: block;
     margin-top: 10px;

@@ -91,7 +91,6 @@ body {
 
         .aprovacao-pendente.mostrar { display: block; }
 
-        /* MODAL */
         .modal {
             display: none;
             position: fixed;
