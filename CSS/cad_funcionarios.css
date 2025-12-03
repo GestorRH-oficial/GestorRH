@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background: #f9fafa59;
+  background: white;
   color: black;
   text-align: center;
   padding: 1em;
@@ -18,7 +18,7 @@ header {
 }
 
 .container {
-    background: #ffffff42;
+    background: white;
     width: 450px;
     padding: 2.5em;
     border-radius: 1em;

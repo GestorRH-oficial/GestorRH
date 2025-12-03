@@ -1,96 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle Escalas e Turno</title>
+    <title>Gestão de Escalas</title>
     <link rel="stylesheet" href="../css/escalas e turno.css">
 </head>
+
 <body>
 
-    <header>
-        <img src="../style/LOGO.jpg" alt="logo gestorRH" class="logo">
-        <h1>GestorRH</h1>
-    </header>
+<header class="top-header">
+    <h1>Gestão de Escalas e Turnos</h1>
+</header>
 
-<section class="controle-escalas">
-    <h2>Controle de Escalas e Turnos</h2>
+<section class="container">
 
-    <form>
-        <label for="funcionario-escala">Funcionário:</label>
-        <select id="funcionario-escala" name="funcionario-escala">
-            <option value="">Selecione</option>
-            <option value="1">Maria Lock</option>
-            <option value="2">Eduardo Santos</option>
-            <option value="3">Carlos Augusto</option>
-            <option value="4">Luciano Gomez</option>
-        </select>
+    <!-- CARD DA ESQUERDA -->
+    <div class="card">
 
-        <label for="tipo-turno">Tipo de Turno:</label>
-        <select id="tipo-turno" name="tipo-turno">
-            <option value="">Selecione</option>
-            <option value="manha">Manhã</option>
-            <option value="tarde">Tarde</option>
-            <option value="noite">Noite</option>
-        </select>
+        <h2 class="titulo-card">Controle de Escalas</h2>
 
-        <label for="data-escala">Data:</label>
-        <input type="date" id="data-escala" name="data-escala">
+        <form class="form-escalas">
 
-        <label for="status">Registro:</label>
-        <select id="status" name="status">
-            <option value="">Selecione</option>
-            <option value="presente">Presente</option>
-            <option value="falta">Falta</option>
-            <option value="atestado">Atestado</option>
-            <option value="ferias">Férias</option>
-            <option value="troca">Pedido de Troca</option>
-        </select>
+            <label>Funcionário:</label>
+            <select>
+                <option>Selecione...</option>
+                <option>Maria Lock</option>
+                <option>Eduardo Santos</option>
+                <option>Carlos Augusto</option>
+                <option>Luciano Gomez</option>
+            </select>
 
-        <button type="submit">Adicionar Registro</button>
-    </form>
+            <label>Tipo de Turno:</label>
+            <select>
+                <option>Selecione...</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
 
-    <h3>Escalas Registradas</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Funcionário</th>
-                <th>Data</th>
-                <th>Turno</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Maria Lock</td>
-                <td>01/11/2025</td>
-                <td>Manhã</td>
-                <td>Presente</td>
-            </tr>
-            <tr>
-                <td>Eduardo Santos</td>
-                <td>01/08/2025</td>
-                <td>Tarde</td>
-                <td>Férias</td>
-            </tr>
-            <tr>
-                <td>Carlos Augusto</td>
-                <td>01/09/2025</td>
-                <td>Noite</td>
-                <td>Atestado</td>
-            </tr>
-            <tr>
-                <td>Luciano Gomez</td>
-                <td>01/10/2025</td>
-                <td>Manhã</td>
-                <td>Pedido de Troca</td>
-            </tr>
-        </tbody>
-    </table>
+            <label>Data:</label>
+            <input type="date">
+
+            <label>Status:</label>
+            <select>
+                <option>Selecione...</option>
+                <option>Presente</option>
+                <option>Falta</option>
+                <option>Atestado</option>
+                <option>Férias</option>
+                <option>Pedido de troca</option>
+            </select>
+
+            <button class="btn">Adicionar Registro</button>
+        </form>
+
+        <h3 class="titulo-tabela">Escalas Registradas</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Funcionário</th>
+                    <th>Data</th>
+                    <th>Turno</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="lista-registros">
+                <tr>
+                    <td>Maria Lock</td>
+                    <td>01/11/2025</td>
+                    <td>Manhã</td>
+                    <td>Presente</td>
+                </tr>
+                <tr>
+                    <td>Eduardo Santos</td>
+                    <td>01/08/2025</td>
+                    <td>Tarde</td>
+                    <td>Férias</td>
+                </tr>
+                <tr>
+                    <td>Carlos Augusto</td>
+                    <td>01/09/2025</td>
+                    <td>Noite</td>
+                    <td>Atestado</td>
+                </tr>
+                <tr>
+                    <td>Luciano Gomez</td>
+                    <td>01/10/2025</td>
+                    <td>Manhã</td>
+                    <td>Pedido de Troca</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
 </section>
- <footer>
-        <p>@ 2025 - GestorRH/Todos direitos reservados.</p>
-    </footer>
+            <a href="menu.html" class="btn-voltar">Voltar</a>
+<footer>
+    <p>@2025 - GestorRH | Todos os direitos reservados.</p>
+</footer>
+
+<script src="../script/escala.js"></script>
 
 </body>
 </html>

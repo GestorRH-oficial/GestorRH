@@ -1,98 +1,129 @@
-/* inicio do css da tela de escalas e turno */
-
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+/* Fundo geral */
 body {
     margin: 0;
-    padding: 0;
-     background-image: url(../style/fundo\ cinza.png);
-}
-    
-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 35%;
-     background-image: url(../style/fundo\ cinza.png);
-    color: white;
-    padding: 20px;
-}
-
-header .logo {
-    height: auto;
-    max-height: 100px;
-}
-
-.controle-escalas {
+    font-family: Arial, sans-serif;
     background-image: url(../style/fundo\ cinza.png);
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.controle-escalas form label {
-    display: block;
-    margin-top: 10px;
+/* Título principal */
+.top-header {
+    text-align: center;
+    padding: 25px 0;
+    background: none;
+}
+
+.top-header h1 {
+    margin: 0;
+    font-size: 32px;
     font-weight: bold;
 }
 
-.controle-escalas form input, 
-.controle-escalas form select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+/* Container central */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.controle-escalas form button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: dodgerblue;
+/* Card estilo da imagem */
+.card {
+    background: white;
+    padding: 25px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+/* Títulos */
+.titulo-card {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo-tabela {
+    margin-top: 35px;
+    font-size: 18px;
+}
+
+/* Formulário */
+.form-escalas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-escalas select, 
+.form-escalas input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #c9c9c9;
+    font-size: 14px;
+}
+
+/* Botão igual ao da imagem */
+.btn {
+    background: #3b82f6;
     color: white;
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.2s;
+    width: 200px;
 }
 
-.controle-escalas form button:hover {
-    background-color: dodgerblue;
+.btn:hover {
+    background: #1d63d4;
 }
 
-.controle-escalas table {
+/* Tabela */
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
 }
 
-.controle-escalas table, 
-.controle-escalas th, 
-.controle-escalas td {
-    border: 1px solid #ccc;
-}
-
-.controle-escalas th, 
-.controle-escalas td {
+table th {
+    background: #f0f0f0;
     padding: 10px;
-    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f7f7f7;
+}
+
+.btn-voltar {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    background: #3b82f6;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
     font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: 0.2s;
 }
 
-.controle-escalas h2, .controle-escalas h3 {
-    color: black;
-    margin-bottom: 10px;
+.btn-voltar:hover {
+    background: #1d63d4;
 }
 
+
+/* Rodapé */
 footer {
-    margin-top: 1000px ;
     text-align: center;
-    padding: 30px;
-     background-image: url(../style/fundo\ cinza.png);
+    padding: 20px;
+    margin-top: 40px;
+    color: #444;
 }
-
-/* fim do css da tela de escalas e turno */
